@@ -103,7 +103,7 @@ const getFormattedLetter = letter => {
  * @param {string}             acc  String acumuladora dos textos recursivamente
  */
 const recursiveTreeParse = (arr, root, acc = '') => {
-  if (typeof root === 'object' && root.left === null && root.right === null && root.letter !== '-') {
+  if (root && root.left === null && root.right === null && root.letter !== '-') {
     return arr.push({
       letter: getFormattedLetter(root.letter),
       code: acc,
